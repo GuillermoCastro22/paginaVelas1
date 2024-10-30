@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 40px 0; /* Espaciado superior e inferior */
+    color: transparent;
+    background: linear-gradient(45deg, #800020, #ff6f61);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-bottom: 4px solid #800020;
+    padding-bottom: 10px;
+    text-align: center; /* Centra el título */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Asegura espacio entre menú y productos */
+    margin: 20px;
+    width: 100%;
+}
+
+.menu {
+    width: 200px;
+    background-color: #dcdcdc; /* Color gris para el menú */
+    padding: 15px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.menu-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #cccccc; /* Fondo gris para el título del menú */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu-item {
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s;
+    margin: 5px 0;
+}
+
+.menu-item:hover {
+    background-color: #b0b0b0; /* Color al pasar el mouse */
+}
+
+.info-box {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Color de fondo para el cuadro de información */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas para las imágenes */
+    gap: 20px;
+    flex: 1; /* Toma el resto del espacio disponible */
+}
+
+.product {
+    text-align: center; /* Asegura que todos los elementos dentro de product estén centrados */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 150px; /* Tamaño de las imágenes */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 8px;
+}
+
+.product-name {
+    display: block; /* Asegura que ocupe toda la línea */
+    background-color: #f5f5f5; /* Color de fondo para los nombres de los productos */
+    padding: 5px;
+    border-radius: 5px; /* Esquinas redondeadas */
+    margin-top: 10px; /* Espacio superior para separar de la imagen */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Mantener el texto en negrita */
+}
+
+.price {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.social-button:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a una columna en pantallas más pequeñas */
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+    }
+
+    .menu {
+        width: 100%; /* Menú ocupa todo el ancho */
+        margin-right: 0; /* Sin margen a la derecha */
+        margin-bottom: 20px; /* Espacio entre el menú y los productos */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Ajustar tamaño de título en pantallas pequeñas */
+    }
+}
+
+.menu-title {
+    background-color: #f5f5f5; /* Mismo color que el cuadro de desglose */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Centrar el texto */
+    font-weight: bold;
+    margin-bottom: 10px; /* Separar del resto del menú */
+}
+
+.menu {
+    background-color: #ffcccc; /* Fondo rojo claro para la sección de información */
+    padding: 15px;
+    border-radius: 5px;
+    margin-right: 20px; /* Separar un poco del grid de productos */
+}

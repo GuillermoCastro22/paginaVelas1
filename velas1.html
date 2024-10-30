@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Incluir Font Awesome -->
+    <link rel="stylesheet" href="velas.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alvella - Velas Artesanales</title>
+</head>
+<body>
+
+    <h1>Alvella</h1>
+
+    <div class="container">
+        <div class="menu">
+            <div class="menu-title">Información de las Velas</div>
+            <div class="menu-item" id="cuarzo-rosa">Cuarzo Rosa</div>
+            <div class="info-box" id="info-cuarzo-rosa" style="display: none;">
+                Este es un detalle sobre la vela de Cuarzo Rosa.
+            </div>
+            <div class="menu-item" id="cuarzo-cristal">Cuarzo Cristal</div>
+            <div class="info-box" id="info-cuarzo-cristal" style="display: none;">
+                Este es un detalle sobre la vela de Cuarzo Cristal.
+            </div>
+            <div class="menu-item" id="cuarzo-ametista">Cuarzo Amatista</div>
+            <div class="info-box" id="info-cuarzo-ametista" style="display: none;">
+                Este es un detalle sobre la vela de Cuarzo Amatista.
+            </div>
+            <div class="menu-item" id="cuarzo-verde">Cuarzo Verde</div>
+            <div class="info-box" id="info-cuarzo-verde" style="display: none;">
+                Este es un detalle sobre la vela de Cuarzo Verde.
+            </div>
+            <div class="menu-item" id="vela-clasica">Vela Clásica</div>
+            <div class="info-box" id="info-vela-clasica" style="display: none;">
+                Este es un detalle sobre la Vela Clásica.
+            </div>
+        </div>
+
+        <div class="product-grid">
+            <div class="product">
+                <img src="imagenes/image.png" alt="Cuarzo Rosa">
+                <div class="product-name">
+                    <a href="https://www.instagram.com/alvellailumina/" target="_blank">Cuarzo Rosa</a>
+                </div>
+                <div class="price">$10.00</div>
+            </div>
+            <div class="product">
+                <img src="imagenes/image1.png" alt="Cuarzo Cristal">
+                <div class="product-name">
+                    <a href="https://www.instagram.com/alvellailumina/" target="_blank">Cuarzo Cristal</a>
+                </div>
+                <div class="price">$12.00</div>
+            </div>
+            <div class="product">
+                <img src="imagenes/image3.png" alt="Cuarzo Amatista">
+                <div class="product-name">
+                    <a href="https://www.instagram.com/alvellailumina/" target="_blank">Cuarzo Amatista</a>
+                </div>
+                <div class="price">$15.00</div>
+            </div>
+            <div class="product">
+                <img src="imagenes/image4.png" alt="Cuarzo Verde">
+                <div class="product-name">
+                    <a href="https://www.instagram.com/alvellailumina/" target="_blank">Cuarzo Verde</a>
+                </div>
+                <div class="price">$18.00</div>
+            </div>
+            <div class="product">
+                <img src="imagenes/image5.png" alt="Vela Clasica">
+                <div class="product-name">
+                    <a href="https://www.instagram.com/alvellailumina/" target="_blank">Vela Clásica</a>
+                </div>
+                <div class="price">$20.00</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="social-buttons">
+        <a href="https://wa.me/1158768873" class="social-button" style="background-color: #25D366;">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://www.instagram.com/alvellailumina/" class="social-button" style="background-color: #E1306C;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+    </div>
+
+    <script src="velas.js"></script>
+    <script>
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('mouseover', function() {
+                const infoBox = document.getElementById(`info-${this.id}`);
+                infoBox.style.display = 'block'; // Mostrar la información
+            });
+
+            item.addEventListener('mouseout', function() {
+                const infoBox = document.getElementById(`info-${this.id}`);
+                infoBox.style.display = 'none'; // Ocultar la información
+            });
+        });
+    </script>
+</body>
+</html>
